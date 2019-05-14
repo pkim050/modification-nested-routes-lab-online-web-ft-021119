@@ -5,6 +5,6 @@ module ArtistsHelper
 
   def artist_select(song)
     collection_select(:song, :artist_id, Artist.all, :id, :name) if song.artist.nil?
-    hidden_field(:song, artist_id) if !song.artist.nil?
+    hidden_field(:song, :artist_id) if !song.artist.nil?
   end
 end
